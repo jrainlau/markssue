@@ -24,7 +24,7 @@ class Markssue {
     const markssueHtml = `
     <div class="markssue-head">
       <button class="markssue_switch btn btn-sm Header-item inside">>> Hide Markssue</button>
-      <img class="markssue-head-logo" src="../imgs/logo2.png" />
+      <img class="markssue-head-logo" src="https://raw.githubusercontent.com/jrainlau/markssue/master/imgs/logo3.png" />
     </div>
     <div class="markssue-content comment-body markdown-body js-preview-body"></div>
     <div class="markssue-side"></div>
