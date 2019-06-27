@@ -1,7 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "markssue",
+  "name": "麻薯 | Markssue",
   "version": "0.0.1",
+  "description": "🍘 Markdown previewer for editing Github issues.",
+  "icons": {
+    "16": "imgs/logo4.png",
+    "48": "imgs/logo4.png",
+    "128": "imgs/logo4.png"
+  },
+  "homepage_url": "https://github.com/jrainlau/markssue",
   "content_scripts": [
       {
           "matches": ["https://github.com/*"],
@@ -10,5 +17,5 @@
           "run_at": "document_start"
       }
   ],
-  "web_accessible_resources": ["js/inject.js", "js/marked.min.js", "js/utils.js"]
+  "web_accessible_resources": ["js/markssue.js", "js/marked.js"]
 }

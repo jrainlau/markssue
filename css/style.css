@@ -1,8 +1,8 @@
 .markssue_switch {
+  height: 32px;
   margin-left: 16px;
-}
-.markssue_switch.inside {
-  height: 100%;
+  border-radius: 16px;
+  cursor: pointer;
 }
 .markssue {
   position: fixed;
@@ -11,7 +11,6 @@
   bottom: 0;
   width: 500px;
   background: #fff;
-  border-left: 1px solid #d1d5da;
   z-index: 200;
   overflow: scroll;
   transition: transform .5s ease;
@@ -25,18 +24,23 @@
   padding: 16px 0;
   box-sizing: content-box;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
-.markssue-head-logo {
-  height: 100%;
-  margin-right: 16px;
-  border-radius: 16px;
+.markssue-head-desc {
+  margin-left: 10px;
+  color: #fff;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  cursor: default;
+}
+.markssue-content {
+  border-left: 1px solid #d1d5da;
 }
 .markssue-side {
   position: absolute;
-  top: 0;
+  top: 64px;
   bottom: 0;
   left: 0;
   width: 3px;
+  border-left: 1px solid #d1d5da;
   cursor: ew-resize;
 }

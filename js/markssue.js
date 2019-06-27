@@ -2,8 +2,6 @@ let issueBody = null
 let markssue = null
 let markssueSwitch = null
 
-let onShow = false
-
 class Markssue {
   static onShow = false
 
@@ -23,22 +21,22 @@ class Markssue {
 
     const markssueHtml = `
     <div class="markssue-head">
-      <button class="markssue_switch btn btn-sm Header-item inside">>> Hide Markssue</button>
-      <img class="markssue-head-logo" src="https://raw.githubusercontent.com/jrainlau/markssue/master/imgs/logo3.png" />
+      <img class="markssue-head-logo markssue_switch" src="https://raw.githubusercontent.com/jrainlau/markssue/master/imgs/logo3.png" />
+      <span class="markssue-head-desc">麻薯 | Markssue</span>
     </div>
     <div class="markssue-content comment-body markdown-body js-preview-body"></div>
     <div class="markssue-side"></div>
     `
 
     markssue = document.createElement('div')
-    markssue.setAttribute('class', onShow ? 'markssue' : 'markssue hide')
+    markssue.setAttribute('class', Markssue.onShow ? 'markssue' : 'markssue hide')
     markssue.style.width = (localStorage.getItem('markssue_width') || 500) + 'px'
     markssue.innerHTML = markssueHtml
     document.body.appendChild(markssue)
 
-    markssueSwitch = document.createElement('button')
-    markssueSwitch.setAttribute('class', 'markssue_switch btn btn-sm Header-item')
-    markssueSwitch.innerText = '<< Show Markssue'
+    markssueSwitch = document.createElement('img')
+    markssueSwitch.setAttribute('class', 'markssue_switch')
+    markssueSwitch.setAttribute('src', 'https://raw.githubusercontent.com/jrainlau/markssue/master/imgs/logo3.png')
     document.querySelector('header').appendChild(markssueSwitch)
 
     Markssue.bindEvent()
@@ -76,8 +74,8 @@ class Markssue {
 
     document.querySelectorAll('.markssue_switch').forEach(s => {
       s.addEventListener('click', () => {
-        onShow = !onShow
-        if (!onShow) {
+        Markssue.onShow = !Markssue.onShow
+        if (!Markssue.onShow) {
           markssue.classList.add('hide')
         } else {
           markssue.classList.remove('hide')
