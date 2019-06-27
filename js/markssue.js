@@ -40,6 +40,7 @@ class Markssue {
     document.querySelector('header').appendChild(markssueSwitch)
 
     Markssue.bindEvent()
+    Markssue.syncScroll()
   }
 
   static removeInstance () {
@@ -102,6 +103,14 @@ class Markssue {
         baseWidth = markssue.getBoundingClientRect().width
         localStorage.setItem('markssue_width', baseWidth)
       }
+    })
+  }
+
+  static syncScroll () {
+    let p = 0
+    issueBody.addEventListener('scroll', (e) => {
+      p = e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight)
+      markssue.scrollTop = (markssue.scrollHeight - markssue.clientHeight) * p
     })
   }
 }

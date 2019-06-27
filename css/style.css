@@ -20,6 +20,8 @@
 }
 .markssue-head {
   background: #373e43;
+  position: sticky;
+  top: 0;
   height: 32px;
   padding: 16px 0;
   box-sizing: content-box;
