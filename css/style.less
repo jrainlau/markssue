@@ -1,0 +1,36 @@
+.markssue_switch {
+  margin-left: 16px;
+  &.inside {
+    height: 100%;
+  }
+}
+
+.markssue {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  background: #fff;
+  border-left: 1px solid #d1d5da;;
+  z-index: 200;
+  overflow: scroll;
+  transition: transform .5s ease;
+  &.hide {
+    transform: translateX(1000px);
+  }
+  &-head {
+    background: rgb(55, 62, 67);
+    height: 32px;
+    padding: 16px 0;
+    box-sizing: content-box;
+  }
+  &-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    cursor: ew-resize;
+  }
+}

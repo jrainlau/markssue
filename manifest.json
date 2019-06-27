@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "markssue",
+  "version": "0.0.1",
+  "content_scripts": [
+      {
+          "matches": ["https://github.com/*"],
+          "js": ["js/content-script.js"],
+          "css": ["css/style.css"],
+          "run_at": "document_start"
+      }
+  ],
+  "web_accessible_resources": ["js/inject.js", "js/marked.min.js", "js/utils.js"]
+}
